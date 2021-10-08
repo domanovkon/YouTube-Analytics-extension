@@ -1,0 +1,912 @@
+
+                             <html>
+                                 <head>
+                                 <style>
+    /*!
+     * chiefSlider (https://itchief.ru/lessons/php/feedback-form-for-website)
+     * Copyright 2018 Alexander Maltsev
+     * Licensed under MIT (https://github.com/itchief/feedback-form/blob/master/LICENSE)
+     */
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      color: #0;
+      height: 300px;
+    }
+
+    .slider {
+      position: relative;
+      overflow: hidden;
+    }
+    .slider1 {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .slider2 {
+      position: relative;
+      overflow: hidden;
+    }
+    
+        .slider3 {
+      position: relative;
+      overflow: hidden;
+    }
+        
+    
+        .slider4 {
+      position: relative;
+      overflow: hidden;
+    }
+        
+    
+
+    .slider__wrapper {
+      display: flex;
+      transition: transform 0.6s ease;
+    }
+
+    .slider__item {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .slider__control {
+      position: absolute;
+      top: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      color: #fff;
+      text-align: center;
+      opacity: 0.5;
+      height: 50px;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, .5);
+    }
+
+    .slider__control_show {
+      display: flex;
+    }
+
+    .slider__control:hover,
+    .slider__control:focus {
+      color: #fff;
+      text-decoration: none;
+      outline: 0;
+      opacity: .9;
+    }
+
+    .slider__control_left {
+      left: 0;
+    }
+
+    .slider__control_right {
+      right: 0;
+    }
+
+    .slider__control::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: transparent no-repeat center center;
+      background-size: 100% 100%;
+    }
+
+    .slider__control_left::before {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    }
+
+    .slider__control_right::before {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    }
+
+    .slider__item>div {
+      line-height: 500px;
+      font-size: 100px;
+      text-align: center;
+    }
+  </style>
+  <link rel="icon" href="../youtube_ico.png" type="image/png">
+                                     <title>Отчет - Четверг_08.07.2021_11-14-30</title>
+                                 </head>
+                                 <body>
+                                     <p><center><h2>Отчет об анализе популярности тематических роликов на YouTube</center></p>
+                                     <p><center><h2>на четверг 8 июля 2021г.</center></p>
+                                     <table width="100%">
+                                         <tr>
+                                             <td>
+                                                 <ul>
+                                                     <li style="list-style-type:none;font-size:21px">Количество видео по категориям</li>
+                                                     
+                                                     <li style="margin-left:30px"><b>информационные системы и технологии:</b> 443518 в.</li>
+                                                     
+                                                     <li style="margin-left:30px"><b>информатика и вычислительная техника:</b> 73945 в.</li>
+                                                     
+                                                </ul>
+                                             </td>
+                                             <td>
+                                                 <ul>
+                                                     <li style="list-style-type:none;font-size:21px;color:tomato">Количество лайков по категориям</li>
+                                                     
+                                                     <li style="margin-left:30px"><b>информационные системы и технологии:</b> 438 л.</li>
+                                                     
+                                                     <li style="margin-left:30px"><b>информатика и вычислительная техника:</b> 1549 л.</li>
+                                                     
+                                                </ul>
+                                             </td>
+                                             <td>
+                                                 <ul>
+                                                     <li style="list-style-type:none;font-size:21px;color:deepskyblue">Количество дизлайков по категориям</li>
+                                                     
+                                                     <li style="margin-left:30px"><b>информационные системы и технологии:</b> 30 д.</li>
+                                                     
+                                                     <li style="margin-left:30px"><b>информатика и вычислительная техника:</b> 54 д.</li>
+                                                     
+                                                </ul>
+                                             </td>
+                                        </tr>
+                                        <tr>
+                                             <td>
+                                                 <ul>
+                                                     <li style="list-style-type:none;font-size:21px;color:magenta">Количество комментариев по категориям</li>
+                                                     
+                                                     <li style="margin-left:30px"><b>информационные системы и технологии:</b> 40 к.</li>
+                                                     
+                                                     <li style="margin-left:30px"><b>информатика и вычислительная техника:</b> 338 к.</li>
+                                                     
+                                                </ul>
+                                             </td>
+                                             <td>
+                                                 <ul>
+                                                     <li style="list-style-type:none;font-size:21px;color:gold">Количество просмотров по категориям</li>
+                                                     
+                                                     <li style="margin-left:30px"><b>информационные системы и технологии:</b> 17108 п.</li>
+                                                     
+                                                     <li style="margin-left:30px"><b>информатика и вычислительная техника:</b> 55442 п.</li>
+                                                     
+                                                </ul>
+                                             </td>
+                                             <td>
+                                                 <ul>
+                                                     <li style="list-style-type:none;font-size:21px;color:red">Среднее количество лайк/просмотр</li>
+                                                     
+                                                     <li style="margin-left:30px"><b>информационные системы и технологии:</b> 0.0256 л/п</li>
+                                                     
+                                                     <li style="margin-left:30px"><b>информатика и вычислительная техника:</b> 0.02794 л/п</li>
+                                                     
+                                                 </ul>
+                                             </td>
+                                        </tr>
+                                        <tr>
+                                             <td>
+                                                 <ul>
+                                                     <li style="list-style-type:none;font-size:21px;color:purple">Среднее количество дизлайк/просмотр</li>
+                                                     
+                                                     <li style="margin-left:30px"><b>информационные системы и технологии:</b> 0.00175 д/п</li>
+                                                     
+                                                     <li style="margin-left:30px"><b>информатика и вычислительная техника:</b> 0.00097 д/п</li>
+                                                     
+                                                 </ul>
+                                             </td>
+                                             <td>
+                                                 <ul>
+                                                     <li style="list-style-type:none;font-size:21px;color:grey">Отношение лайков к дизлайкам</li>
+                                                     
+                                                     <li style="margin-left:30px"><b>информационные системы и технологии:</b> 14.6 л/д</li>
+                                                     
+                                                     <li style="margin-left:30px"><b>информатика и вычислительная техника:</b> 28.7 л/д</li>
+                                                     
+                                                 </ul>
+                                             </td>
+                                             <td>
+                                                 <ul>
+                                                     <li style="list-style-type:none;font-size:21px;color:orange">Количество видео за последние полгода</li>
+                                                     
+                                                     <li style="margin-left:30px"><b>информационные системы и технологии:</b> 71 в.</li>
+                                                     
+                                                     <li style="margin-left:30px"><b>информатика и вычислительная техника:</b> 31 в.</li>
+                                                     
+                                                 </ul>
+                                             </td>
+                                        </tr>
+                                     </table>
+                                     </br>
+                                     <p><center><h2>Графики зависимостей</center></p>
+                                     <div class="slider" >
+                                         <div class="slider__wrapper">
+                                             
+                                                 <div class="slider__item">
+                                                     <div style="height: auto; background: white;"> <img src="../Четверг_08.07.2021_11-14-30/images/1.png"> </div>
+                                                     </div>
+                                            
+                                                 <div class="slider__item">
+                                                     <div style="height: auto; background: white;"> <img src="../Четверг_08.07.2021_11-14-30/images/2.png"> </div>
+                                                     </div>
+                                            
+                                                 <div class="slider__item">
+                                                     <div style="height: auto; background: white;"> <img src="../Четверг_08.07.2021_11-14-30/images/3.png"> </div>
+                                                     </div>
+                                            
+                                                 <div class="slider__item">
+                                                     <div style="height: auto; background: white;"> <img src="../Четверг_08.07.2021_11-14-30/images/4.png"> </div>
+                                                     </div>
+                                            
+                                                 <div class="slider__item">
+                                                     <div style="height: auto; background: white;"> <img src="../Четверг_08.07.2021_11-14-30/images/5.png"> </div>
+                                                     </div>
+                                            
+                                                 <div class="slider__item">
+                                                     <div style="height: auto; background: white;"> <img src="../Четверг_08.07.2021_11-14-30/images/6.png"> </div>
+                                                     </div>
+                                            
+                                                 <div class="slider__item">
+                                                     <div style="height: auto; background: white;"> <img src="../Четверг_08.07.2021_11-14-30/images/7.png"> </div>
+                                                     </div>
+                                            
+                                                 <div class="slider__item">
+                                                     <div style="height: auto; background: white;"> <img src="../Четверг_08.07.2021_11-14-30/images/8.png"> </div>
+                                                     </div>
+                                            
+                                            </div>
+                                            <a class="slider__control slider__control_left" href="#" role="button"></a>
+                                            <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+                                            </div>
+                                     
+                                     <p><center><h2>Динамика добавления новых видео за последние 3 года</center></p>
+                                     <div class="slider1" >
+                                         <div class="slider__wrapper">
+                                             
+                                                 <div class="slider__item">
+                                                     <div style="height: auto; background: white;"> <img src="../Четверг_08.07.2021_11-14-30/images/9.png"> </div>
+                                                     </div>
+                                            
+                                                 <div class="slider__item">
+                                                     <div style="height: auto; background: white;"> <img src="../Четверг_08.07.2021_11-14-30/images/10.png"> </div>
+                                                     </div>
+                                            
+                                            </div>
+                                            <a class="slider__control slider__control_left" href="#" role="button"></a>
+                                            <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+                                            </div>
+                                     
+                                     
+                                     <p><center><h2>Популярность запросов согласно Google Trends</center></p>
+                                     <div class="slider2" >
+                                         <div class="slider__wrapper">
+                                             
+                                                 <div class="slider__item">
+                                                     <div style="height: auto; background: white;"> <img src="../Четверг_08.07.2021_11-14-30/images/11.png"> </div>
+                                                     </div>
+                                            
+                                                 <div class="slider__item">
+                                                     <div style="height: auto; background: white;"> <img src="../Четверг_08.07.2021_11-14-30/images/12.png"> </div>
+                                                     </div>
+                                            
+                                            </div>
+                                            <a class="slider__control slider__control_left" href="#" role="button"></a>
+                                            <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+                                            </div>
+                                     
+                                     <p><center><h2>Топ-3 видео категорий</center></p>
+                                     
+                                     
+                                         <h3><center><p style="color:blue">Категория <b>«информационные системы и технологии»</b></p></center></h3>
+                                         <div class="slider3" >
+                                         <div class="slider__wrapper">
+                                         
+                                         
+                                         
+                                         <div class="slider__item">
+                                             <h3><center><p style="color:green">1-e место</p></center></h3>
+                                             <table width="100%">
+                                                 <tr align="center">
+                                                     <td>
+                                                         <center><b>Максимум лайков (52)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/LZRn2NkwlWk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                     <td>
+                                                         <center><b>Максимум дизлайков (3)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/PbvTQ9be3-w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                 </tr>
+                                                 <tr align="center">
+                                                     <td>
+                                                         </br><center><b>Максимум комментариев (17)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/LZRn2NkwlWk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                     <td>
+                                                         </br><center><b>Максимум просмотров (2135)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/ZU9XZxBpAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                 </tr>
+                                             </table>
+                                             </br></br>
+                                             </div>
+                                         
+                                         
+                                         
+                                         <div class="slider__item">
+                                             <h3><center><p style="color:green">2-e место</p></center></h3>
+                                             <table width="100%">
+                                                 <tr align="center">
+                                                     <td>
+                                                         <center><b>Максимум лайков (49)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/ZU9XZxBpAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                     <td>
+                                                         <center><b>Максимум дизлайков (3)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/ZU9XZxBpAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                 </tr>
+                                                 <tr align="center">
+                                                     <td>
+                                                         </br><center><b>Максимум комментариев (8)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/wOH5rKRQ108" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                     <td>
+                                                         </br><center><b>Максимум просмотров (1330)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/LZRn2NkwlWk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                 </tr>
+                                             </table>
+                                             </br></br>
+                                             </div>
+                                         
+                                         
+                                         
+                                         <div class="slider__item">
+                                             <h3><center><p style="color:green">3-e место</p></center></h3>
+                                             <table width="100%">
+                                                 <tr align="center">
+                                                     <td>
+                                                         <center><b>Максимум лайков (41)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/wOH5rKRQ108" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                     <td>
+                                                         <center><b>Максимум дизлайков (2)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/6XJXrsk0lqg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                 </tr>
+                                                 <tr align="center">
+                                                     <td>
+                                                         </br><center><b>Максимум комментариев (3)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/sgJaFWjMh4U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                     <td>
+                                                         </br><center><b>Максимум просмотров (1151)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/NnBeTUmVCPU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                 </tr>
+                                             </table>
+                                             </br></br>
+                                             </div>
+                                         
+                                         </div>
+                                            <a class="slider__control slider__control_left" href="#" role="button"></a>
+                                            <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+                                         </div>
+                                     
+                                         <h3><center><p style="color:blue">Категория <b>«информатика и вычислительная техника»</b></p></center></h3>
+                                         <div class="slider4" >
+                                         <div class="slider__wrapper">
+                                         
+                                         
+                                         
+                                         <div class="slider__item">
+                                             <h3><center><p style="color:green">1-e место</p></center></h3>
+                                             <table width="100%">
+                                                 <tr align="center">
+                                                     <td>
+                                                         <center><b>Максимум лайков (594)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/uQeMaFflqwI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                     <td>
+                                                         <center><b>Максимум дизлайков (10)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/8CUITNiBnNA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                 </tr>
+                                                 <tr align="center">
+                                                     <td>
+                                                         </br><center><b>Максимум комментариев (238)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/uQeMaFflqwI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                     <td>
+                                                         </br><center><b>Максимум просмотров (11962)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/uQeMaFflqwI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                 </tr>
+                                             </table>
+                                             </br></br>
+                                             </div>
+                                         
+                                         
+                                         
+                                         <div class="slider__item">
+                                             <h3><center><p style="color:green">2-e место</p></center></h3>
+                                             <table width="100%">
+                                                 <tr align="center">
+                                                     <td>
+                                                         <center><b>Максимум лайков (244)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/ZUG-FlEdRtY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                     <td>
+                                                         <center><b>Максимум дизлайков (9)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/ZUG-FlEdRtY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                 </tr>
+                                                 <tr align="center">
+                                                     <td>
+                                                         </br><center><b>Максимум комментариев (30)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/ZUG-FlEdRtY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                     <td>
+                                                         </br><center><b>Максимум просмотров (6406)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/ZUG-FlEdRtY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                 </tr>
+                                             </table>
+                                             </br></br>
+                                             </div>
+                                         
+                                         
+                                         
+                                         <div class="slider__item">
+                                             <h3><center><p style="color:green">3-e место</p></center></h3>
+                                             <table width="100%">
+                                                 <tr align="center">
+                                                     <td>
+                                                         <center><b>Максимум лайков (110)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/8CUITNiBnNA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                     <td>
+                                                         <center><b>Максимум дизлайков (6)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/ULgD8zxlf0k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                 </tr>
+                                                 <tr align="center">
+                                                     <td>
+                                                         </br><center><b>Максимум комментариев (19)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/8CUITNiBnNA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                     <td>
+                                                         </br><center><b>Максимум просмотров (3645)</b></center>
+                                                         <iframe width="480" height="270" src="https://www.youtube.com/embed/ixYjIGY2EWo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                     </td>
+                                                 </tr>
+                                             </table>
+                                             </br></br>
+                                             </div>
+                                         
+                                         </div>
+                                            <a class="slider__control slider__control_left" href="#" role="button"></a>
+                                            <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+                                         </div>
+                                     
+                                 </body>
+                                 <script>
+    'use strict';
+    var multiItemSlider = (function () {
+      return function (selector, config) {
+        var
+          _mainElement = document.querySelector(selector), // основный элемент блока
+          _sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
+          _sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
+          _sliderControls = _mainElement.querySelectorAll('.slider__control'), // элементы управления
+          _sliderControlLeft = _mainElement.querySelector('.slider__control_left'), // кнопка "LEFT"
+          _sliderControlRight = _mainElement.querySelector('.slider__control_right'), // кнопка "RIGHT"
+          _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), // ширина обёртки
+          _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), // ширина одного элемента
+          _positionLeftItem = 0, // позиция левого активного элемента
+          _transform = 0, // значение транфсофрмации .slider_wrapper
+          _step = _itemWidth / _wrapperWidth * 100, // величина шага (для трансформации)
+          _items = []; // массив элементов
+        // наполнение массива _items
+        _sliderItems.forEach(function (item, index) {
+          _items.push({ item: item, position: index, transform: 0 });
+        });
+        var position = {
+          getMin: 0,
+          getMax: _items.length - 1,
+        }
+        var _transformItem = function (direction) {
+          if (direction === 'right') {
+            if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) >= position.getMax) {
+              return;
+            }
+            if (!_sliderControlLeft.classList.contains('slider__control_show')) {
+              _sliderControlLeft.classList.add('slider__control_show');
+            }
+            if (_sliderControlRight.classList.contains('slider__control_show') && (_positionLeftItem + _wrapperWidth / _itemWidth) >= position.getMax) {
+              _sliderControlRight.classList.remove('slider__control_show');
+            }
+            _positionLeftItem++;
+            _transform -= _step;
+          }
+          if (direction === 'left') {
+            if (_positionLeftItem <= position.getMin) {
+              return;
+            }
+            if (!_sliderControlRight.classList.contains('slider__control_show')) {
+              _sliderControlRight.classList.add('slider__control_show');
+            }
+            if (_sliderControlLeft.classList.contains('slider__control_show') && _positionLeftItem - 1 <= position.getMin) {
+              _sliderControlLeft.classList.remove('slider__control_show');
+            }
+            _positionLeftItem--;
+            _transform += _step;
+          }
+          _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
+        }
+
+        // обработчик события click для кнопок "назад" и "вперед"
+        var _controlClick = function (e) {
+          var direction = this.classList.contains('slider__control_right') ? 'right' : 'left';
+          e.preventDefault();
+          _transformItem(direction);
+        };
+
+        var _setUpListeners = function () {
+          // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
+          _sliderControls.forEach(function (item) {
+            item.addEventListener('click', _controlClick);
+          });
+        }
+        // инициализация
+        _setUpListeners();
+
+        return {
+          right: function () { // метод right
+            _transformItem('right');
+          },
+          left: function () { // метод left
+            _transformItem('left');
+          }
+        }
+
+      }
+    }());
+    var slider = multiItemSlider('.slider')
+  </script>
+  <script>
+    'use strict';
+    var multiItemSlider1 = (function () {
+      return function (selector, config) {
+        var
+          _mainElement = document.querySelector(selector), // основный элемент блока
+          _sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
+          _sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
+          _sliderControls = _mainElement.querySelectorAll('.slider__control'), // элементы управления
+          _sliderControlLeft = _mainElement.querySelector('.slider__control_left'), // кнопка "LEFT"
+          _sliderControlRight = _mainElement.querySelector('.slider__control_right'), // кнопка "RIGHT"
+          _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), // ширина обёртки
+          _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), // ширина одного элемента
+          _positionLeftItem = 0, // позиция левого активного элемента
+          _transform = 0, // значение транфсофрмации .slider_wrapper
+          _step = _itemWidth / _wrapperWidth * 100, // величина шага (для трансформации)
+          _items = []; // массив элементов
+        // наполнение массива _items
+        _sliderItems.forEach(function (item, index) {
+          _items.push({ item: item, position: index, transform: 0 });
+        });
+        var position = {
+          getMin: 0,
+          getMax: _items.length - 1,
+        }
+        var _transformItem = function (direction) {
+          if (direction === 'right') {
+            if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) >= position.getMax) {
+              return;
+            }
+            if (!_sliderControlLeft.classList.contains('slider__control_show')) {
+              _sliderControlLeft.classList.add('slider__control_show');
+            }
+            if (_sliderControlRight.classList.contains('slider__control_show') && (_positionLeftItem + _wrapperWidth / _itemWidth) >= position.getMax) {
+              _sliderControlRight.classList.remove('slider__control_show');
+            }
+            _positionLeftItem++;
+            _transform -= _step;
+          }
+          if (direction === 'left') {
+            if (_positionLeftItem <= position.getMin) {
+              return;
+            }
+            if (!_sliderControlRight.classList.contains('slider__control_show')) {
+              _sliderControlRight.classList.add('slider__control_show');
+            }
+            if (_sliderControlLeft.classList.contains('slider__control_show') && _positionLeftItem - 1 <= position.getMin) {
+              _sliderControlLeft.classList.remove('slider__control_show');
+            }
+            _positionLeftItem--;
+            _transform += _step;
+          }
+          _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
+        }
+
+        // обработчик события click для кнопок "назад" и "вперед"
+        var _controlClick = function (e) {
+          var direction = this.classList.contains('slider__control_right') ? 'right' : 'left';
+          e.preventDefault();
+          _transformItem(direction);
+        };
+
+        var _setUpListeners = function () {
+          // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
+          _sliderControls.forEach(function (item) {
+            item.addEventListener('click', _controlClick);
+          });
+        }
+        // инициализация
+        _setUpListeners();
+
+        return {
+          right: function () { // метод right
+            _transformItem('right');
+          },
+          left: function () { // метод left
+            _transformItem('left');
+          }
+        }
+
+      }
+    }());
+    var slider1 = multiItemSlider1('.slider1')
+  </script>
+  <script>
+    'use strict';
+    var multiItemSlider2 = (function () {
+      return function (selector, config) {
+        var
+          _mainElement = document.querySelector(selector), // основный элемент блока
+          _sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
+          _sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
+          _sliderControls = _mainElement.querySelectorAll('.slider__control'), // элементы управления
+          _sliderControlLeft = _mainElement.querySelector('.slider__control_left'), // кнопка "LEFT"
+          _sliderControlRight = _mainElement.querySelector('.slider__control_right'), // кнопка "RIGHT"
+          _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), // ширина обёртки
+          _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), // ширина одного элемента
+          _positionLeftItem = 0, // позиция левого активного элемента
+          _transform = 0, // значение транфсофрмации .slider_wrapper
+          _step = _itemWidth / _wrapperWidth * 100, // величина шага (для трансформации)
+          _items = []; // массив элементов
+        // наполнение массива _items
+        _sliderItems.forEach(function (item, index) {
+          _items.push({ item: item, position: index, transform: 0 });
+        });
+        var position = {
+          getMin: 0,
+          getMax: _items.length - 1,
+        }
+        var _transformItem = function (direction) {
+          if (direction === 'right') {
+            if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) >= position.getMax) {
+              return;
+            }
+            if (!_sliderControlLeft.classList.contains('slider__control_show')) {
+              _sliderControlLeft.classList.add('slider__control_show');
+            }
+            if (_sliderControlRight.classList.contains('slider__control_show') && (_positionLeftItem + _wrapperWidth / _itemWidth) >= position.getMax) {
+              _sliderControlRight.classList.remove('slider__control_show');
+            }
+            _positionLeftItem++;
+            _transform -= _step;
+          }
+          if (direction === 'left') {
+            if (_positionLeftItem <= position.getMin) {
+              return;
+            }
+            if (!_sliderControlRight.classList.contains('slider__control_show')) {
+              _sliderControlRight.classList.add('slider__control_show');
+            }
+            if (_sliderControlLeft.classList.contains('slider__control_show') && _positionLeftItem - 1 <= position.getMin) {
+              _sliderControlLeft.classList.remove('slider__control_show');
+            }
+            _positionLeftItem--;
+            _transform += _step;
+          }
+          _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
+        }
+
+        // обработчик события click для кнопок "назад" и "вперед"
+        var _controlClick = function (e) {
+          var direction = this.classList.contains('slider__control_right') ? 'right' : 'left';
+          e.preventDefault();
+          _transformItem(direction);
+        };
+
+        var _setUpListeners = function () {
+          // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
+          _sliderControls.forEach(function (item) {
+            item.addEventListener('click', _controlClick);
+          });
+        }
+        // инициализация
+        _setUpListeners();
+
+        return {
+          right: function () { // метод right
+            _transformItem('right');
+          },
+          left: function () { // метод left
+            _transformItem('left');
+          }
+        }
+      }
+    }());
+    var slider2 = multiItemSlider2('.slider2')
+  </script>
+  
+  
+      <script>
+    'use strict';
+    var multiItemSlider3 = (function () {
+      return function (selector, config) {
+        var
+          _mainElement = document.querySelector(selector), // основный элемент блока
+          _sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
+          _sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
+          _sliderControls = _mainElement.querySelectorAll('.slider__control'), // элементы управления
+          _sliderControlLeft = _mainElement.querySelector('.slider__control_left'), // кнопка "LEFT"
+          _sliderControlRight = _mainElement.querySelector('.slider__control_right'), // кнопка "RIGHT"
+          _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), // ширина обёртки
+          _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), // ширина одного элемента
+          _positionLeftItem = 0, // позиция левого активного элемента
+          _transform = 0, // значение транфсофрмации .slider_wrapper
+          _step = _itemWidth / _wrapperWidth * 100, // величина шага (для трансформации)
+          _items = []; // массив элементов
+        // наполнение массива _items
+        _sliderItems.forEach(function (item, index) {
+          _items.push({ item: item, position: index, transform: 0 });
+        });
+        var position = {
+          getMin: 0,
+          getMax: _items.length - 1,
+        }
+        var _transformItem = function (direction) {
+          if (direction === 'right') {
+            if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) >= position.getMax) {
+              return;
+            }
+            if (!_sliderControlLeft.classList.contains('slider__control_show')) {
+              _sliderControlLeft.classList.add('slider__control_show');
+            }
+            if (_sliderControlRight.classList.contains('slider__control_show') && (_positionLeftItem + _wrapperWidth / _itemWidth) >= position.getMax) {
+              _sliderControlRight.classList.remove('slider__control_show');
+            }
+            _positionLeftItem++;
+            _transform -= _step;
+          }
+          if (direction === 'left') {
+            if (_positionLeftItem <= position.getMin) {
+              return;
+            }
+            if (!_sliderControlRight.classList.contains('slider__control_show')) {
+              _sliderControlRight.classList.add('slider__control_show');
+            }
+            if (_sliderControlLeft.classList.contains('slider__control_show') && _positionLeftItem - 1 <= position.getMin) {
+              _sliderControlLeft.classList.remove('slider__control_show');
+            }
+            _positionLeftItem--;
+            _transform += _step;
+          }
+          _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
+        }
+
+        // обработчик события click для кнопок "назад" и "вперед"
+        var _controlClick = function (e) {
+          var direction = this.classList.contains('slider__control_right') ? 'right' : 'left';
+          e.preventDefault();
+          _transformItem(direction);
+        };
+
+        var _setUpListeners = function () {
+          // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
+          _sliderControls.forEach(function (item) {
+            item.addEventListener('click', _controlClick);
+          });
+        }
+        // инициализация
+        _setUpListeners();
+
+        return {
+          right: function () { // метод right
+            _transformItem('right');
+          },
+          left: function () { // метод left
+            _transformItem('left');
+          }
+        }
+      }
+    }());
+    var slider3 = multiItemSlider3('.slider3')
+  </script>
+  
+      <script>
+    'use strict';
+    var multiItemSlider4 = (function () {
+      return function (selector, config) {
+        var
+          _mainElement = document.querySelector(selector), // основный элемент блока
+          _sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
+          _sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
+          _sliderControls = _mainElement.querySelectorAll('.slider__control'), // элементы управления
+          _sliderControlLeft = _mainElement.querySelector('.slider__control_left'), // кнопка "LEFT"
+          _sliderControlRight = _mainElement.querySelector('.slider__control_right'), // кнопка "RIGHT"
+          _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), // ширина обёртки
+          _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), // ширина одного элемента
+          _positionLeftItem = 0, // позиция левого активного элемента
+          _transform = 0, // значение транфсофрмации .slider_wrapper
+          _step = _itemWidth / _wrapperWidth * 100, // величина шага (для трансформации)
+          _items = []; // массив элементов
+        // наполнение массива _items
+        _sliderItems.forEach(function (item, index) {
+          _items.push({ item: item, position: index, transform: 0 });
+        });
+        var position = {
+          getMin: 0,
+          getMax: _items.length - 1,
+        }
+        var _transformItem = function (direction) {
+          if (direction === 'right') {
+            if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) >= position.getMax) {
+              return;
+            }
+            if (!_sliderControlLeft.classList.contains('slider__control_show')) {
+              _sliderControlLeft.classList.add('slider__control_show');
+            }
+            if (_sliderControlRight.classList.contains('slider__control_show') && (_positionLeftItem + _wrapperWidth / _itemWidth) >= position.getMax) {
+              _sliderControlRight.classList.remove('slider__control_show');
+            }
+            _positionLeftItem++;
+            _transform -= _step;
+          }
+          if (direction === 'left') {
+            if (_positionLeftItem <= position.getMin) {
+              return;
+            }
+            if (!_sliderControlRight.classList.contains('slider__control_show')) {
+              _sliderControlRight.classList.add('slider__control_show');
+            }
+            if (_sliderControlLeft.classList.contains('slider__control_show') && _positionLeftItem - 1 <= position.getMin) {
+              _sliderControlLeft.classList.remove('slider__control_show');
+            }
+            _positionLeftItem--;
+            _transform += _step;
+          }
+          _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
+        }
+
+        // обработчик события click для кнопок "назад" и "вперед"
+        var _controlClick = function (e) {
+          var direction = this.classList.contains('slider__control_right') ? 'right' : 'left';
+          e.preventDefault();
+          _transformItem(direction);
+        };
+
+        var _setUpListeners = function () {
+          // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
+          _sliderControls.forEach(function (item) {
+            item.addEventListener('click', _controlClick);
+          });
+        }
+        // инициализация
+        _setUpListeners();
+
+        return {
+          right: function () { // метод right
+            _transformItem('right');
+          },
+          left: function () { // метод left
+            _transformItem('left');
+          }
+        }
+      }
+    }());
+    var slider4 = multiItemSlider4('.slider4')
+  </script>
+  
+                             </html>
+                             

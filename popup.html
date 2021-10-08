@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>YouTube Study Analytics</title>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./config.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./add.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style>
+body { 
+ margin: 0 !important;
+ padding: 0 !important;
+ width: 800;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #ff0808;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  text-align: center;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+</style>
+</head>
+<body>
+<button class="redStyle btn btn-success" style="width: 600px; position: fixed;  margin-top: 400px; margin-left: 25px;">Добавить тему</button>
+<!--<button id="btnAdd" style="width: 250px; position: fixed;  margin-top: 360px; margin-left: 25px;" class="btn btn-success btnAdd">Добавить тему</button>-->
+<form id="form" method="POST" style="width: 650px; height: 500px">
+    <p style="margin-top: 30px; font-weight: bold; text-align: center">
+        <img src="images/icon.png" style="max-width: 50px;">
+        YouTube Study Analytics
+
+    </p>
+    <input id="in1" class= "inputQuery" maxlength="50" style="width: 600px; position: fixed; margin-top: 2px; margin-left: 25px; height: 50px" placeholder="Текст запроса (max: 50 символов)"> 
+    <div style="width: 600px; position: fixed;  margin-top: 110px; margin-left: 25px;">
+
+        <p style="margin-top: -30px; font-weight: bold;">
+        Введенные запросы:
+        </p>
+    </div>
+
+    <div id="in3" class="inner" style="width: 600px; position: fixed;  margin-top: 110px; margin-left: 25px;"></div>
+    <div class="labelWar" style="color: red; width: 600px; position: fixed;  margin-top: 290px; margin-left: 25px;"></div>
+
+    <button id="btn" class="btn btn-success" style="width: 600px; position: fixed;  margin-top: 380px; margin-left: 25px; white-space: nowrap;" type="submit">Анализ
+    </button>
+</form>
+<!-- <div id="loader" class="loader" hidden"></div> -->
+</body>
+</html>
+
